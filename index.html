@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>丰富的前端页面</title>
+  <title>美观且可切换背景的前端页面</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -29,6 +29,19 @@
     p {
       color: #666;
     }
+
+    /* 新增的背景切换样式 */
+    #backgroundToggle {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    #backgroundToggle:hover {
+      background-color: #45a049;
+    }
   </style>
 </head>
 
@@ -36,7 +49,7 @@
 
   <div class="container">
     <h1>欢迎来到我的网站！</h1>
-    <p>这是一个丰富的前端页面示例，包含了 HTML、CSS 和 JavaScript 实现的更多功能。</p>
+    <p>这是一个美观且具有更多功能的前端页面示例，包含了 HTML、CSS 和 JavaScript 实现的背景切换等功能。</p>
 
     <!-- 图片上传区域 -->
     <input type="file" id="imageUpload" accept="image/*">
@@ -45,6 +58,8 @@
     <!-- 显示上传的图片 -->
     <img id="uploadedImage" src="" alt="上传的图片" style="max-width: 100%; height: auto; display: none;">
 
+    <!-- 新增的背景切换按钮 -->
+    <button id="backgroundToggle">切换背景</button>
   </div>
 
   <script>
@@ -66,6 +81,13 @@
         alert('请选择要上传的图片！');
       }
     }
+
+    // 背景切换功能
+    const backgroundToggle = document.getElementById('backgroundToggle');
+    backgroundToggle.addEventListener('click', function () {
+      const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+      document.body.style.backgroundColor = randomColor;
+    });
   </script>
 
 </body>
