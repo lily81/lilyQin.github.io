@@ -3,112 +3,128 @@
     Radius by TEMPLATED
     templated.co @templatedco
     Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
---><html><head><title>My Life</title><meta charset="utf-8">
+--><html><head><title>My Life - Login</title><meta charset="utf-8">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="assets/css/main.css"></head><body>
 
-        <!-- Header -->
-            <header id="header"><div class="inner">
-                    <div class="content">
-                        <h1>My Life</h1>
-                        <h2>About My Life<br>
-                        portfolio template.</h2>
-                        <a href="#" class="button big alt"><span>My Life</span></a>
-                    </div>
-                    <a href="#" class="button hidden"><span>My Life</span></a>
+    <!-- Login Form -->
+    <div id="loginForm">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="login()">Login</button>
+    </div>
+
+    <script>
+        function login() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            // 此处添加您的登录验证逻辑，例如与预定义的账户和密码进行比较
+            if (username === 'qin' && password === '123456') {
+                // 登录成功，隐藏登录表单，显示主要内容
+                document.getElementById('loginForm').style.display = 'none';
+                // 显示后续的网页内容
+                document.getElementById('main').style.display = 'block';
+            } else {
+                alert('Invalid username or password. Please try again.');
+            }
+        }
+    </script>
+
+    <!-- Main Content (initially hidden) -->
+    <div id="main" style="display: none;">
+        <div class="inner">
+            <div class="columns">
+
+                <!-- Column 1 (horizontal, vertical, horizontal, vertical) -->
+                <div class="image fit">
+                    <img src="images/pic01.jpg" alt="" width="800" height="533" onclick="enlargeImage(this)">
                 </div>
-            </header><!-- Main --><div id="main">
-                <div class="inner">
-                    <div class="columns">
-
-                        <!-- Column 1 (horizontal, vertical, horizontal, vertical) -->
-                            <div class="image fit">
-                                <img src="images/pic01.jpg" alt="" width="800" height="533" onclick="enlargeImage(this)">
-                            </div>
-                            <div class="image fit">
-                                <img src="images/pic02.jpg" alt="" width="533" height="800" onclick="enlargeImage(this)">
-                            </div>
-                            <div class="image fit">
-                                <img src="images/pic03.jpg" alt="" width="800" height="533" onclick="enlargeImage(this)">
-                            </div>
-                            <div class="image fit">
-                                <img src="images/pic04.jpg" alt="" width="533" height="800" onclick="enlargeImage(this)">
-                            </div>
-
-                        <!-- Column 2 (vertical, horizontal, vertical, horizontal) -->
-                            <div class="image fit">
-                                <img src="images/pic06.jpg" alt="" width="533" height="800" onclick="enlargeImage(this)">
-                            </div>
-                            <div class="image fit">
-                                <img src="images/pic05.jpg" alt="" width="800" height="533" onclick="enlargeImage(this)">
-                            </div>
-                            <div class="image fit">
-                                <img src="images/pic08.jpg" alt="" width="533" height="800" onclick="enlargeImage(this)">
-                            </div>
-                            <div class="image fit">
-                                <img src="images/pic07.jpg" alt="" width="800" height="533" onclick="enlargeImage(this)">
-                            </div>
-
-                        <!-- Column 3 (horizontal, vertical, horizontal, vertical) -->
-                            <div class="image fit">
-                                <img src="images/pic09.jpg" alt="" width="800" height="533" onclick="enlargeImage(this)">
-                            </div>
-                            <div class="image fit">
-                                <img src="images/pic12.jpg" alt="" width="533" height="800" onclick="enlargeImage(this)">
-                            </div>
-                            <div class="image fit">
-                                <img src="images/pic11.jpg" alt="" width="800" height="533" onclick="enlargeImage(this)">
-                            </div>
-                            <div class="image fit">
-                                <img src="images/pic10.jpg" alt="" width="533" height="800" onclick="enlargeImage(this)">
-                            </div>
-
-                        <!-- Column 4 (vertical, horizontal, vertical, horizontal) -->
-                            <div class="image fit">
-                                <img src="images/pic13.jpg" alt="" width="533" height="800" onclick="enlargeImage(this)">
-                            </div>
-                            <div class="image fit">
-                                <img src="images/pic14.jpg" alt="" width="800" height="533" onclick="enlargeImage(this)">
-                            </div>
-                            <div class="image fit">
-                                <img src="images/pic15.jpg" alt="" width="533" height="800" onclick="enlargeImage(this)">
-                            </div>
-                            <div class="image fit">
-                                <img src="images/pic16.jpg" alt="" width="800" height="533" onclick="enlargeImage(this)">
-                            </div>
-
-                    </div>
+                <div class="image fit">
+                    <img src="images/pic02.jpg" alt="" width="533" height="800" onclick="enlargeImage(this)">
                 </div>
+                <div class="image fit">
+                    <img src="images/pic03.jpg" alt="" width="800" height="533" onclick="enlargeImage(this)">
+                </div>
+                <div class="image fit">
+                    <img src="images/pic04.jpg" alt="" width="533" height="800" onclick="enlargeImage(this)">
+                </div>
+
+                <!-- Column 2 (vertical, horizontal, vertical, horizontal) -->
+                <div class="image fit">
+                    <img src="images/pic06.jpg" alt="" width="533" height="800" onclick="enlargeImage(this)">
+                </div>
+                <div class="image fit">
+                    <img src="images/pic05.jpg" alt="" width="800" height="533" onclick="enlargeImage(this)">
+                </div>
+                <div class="image fit">
+                    <img src="images/pic08.jpg" alt="" width="533" height="800" onclick="enlargeImage(this)">
+                </div>
+                <div class="image fit">
+                    <img src="images/pic07.jpg" alt="" width="800" height="533" onclick="enlargeImage(this)">
+                </div>
+
+                <!-- Column 3 (horizontal, vertical, horizontal, vertical) -->
+                <div class="image fit">
+                    <img src="images/pic09.jpg" alt="" width="800" height="533" onclick="enlargeImage(this)">
+                </div>
+                <div class="image fit">
+                    <img src="images/pic12.jpg" alt="" width="533" height="800" onclick="enlargeImage(this)">
+                </div>
+                <div class="image fit">
+                    <img src="images/pic11.jpg" alt="" width="800" height="533" onclick="enlargeImage(this)">
+                </div>
+                <div class="image fit">
+                    <img src="images/pic10.jpg" alt="" width="533" height="800" onclick="enlargeImage(this)">
+                </div>
+
+                <!-- Column 4 (vertical, horizontal, vertical, horizontal) -->
+                <div class="image fit">
+                    <img src="images/pic13.jpg" alt="" width="533" height="800" onclick="enlargeImage(this)">
+                </div>
+                <div class="image fit">
+                    <img src="images/pic14.jpg" alt="" width="800" height="533" onclick="enlargeImage(this)">
+                </div>
+                <div class="image fit">
+                    <img src="images/pic15.jpg" alt="" width="533" height="800" onclick="enlargeImage(this)">
+                </div>
+                <div class="image fit">
+                    <img src="images/pic16.jpg" alt="" width="800" height="533" onclick="enlargeImage(this)">
+                </div>
+
             </div>
+        </div>
+    </div>
 
-        <!-- Footer -->
-            <footer id="footer"><a href="#" class="info fa fa-info-circle"><span>About</span></a>
-                <div class="inner">
-                    <div class="content">
-                        <h3>Life's Precious Voyage</h3>
-                        <p>Life is an exquisite and captivating journey, a symphony of diverse experiences and emotions. It is a canvas painted with the strokes of joy and sorrow, hope and despair, love and loss. Each step we take is a note in the melody of existence, forming a unique and irreplaceable composition.As we progress, the journey becomes a tapestry woven with the threads of friendships and relationships, each connection adding depth and color to our story. We encounter challenges that mold our character, turning us into resilient beings capable of weathering any storm.Life's journey is not always smooth; there are detours and roadblocks. But it is in these moments of struggle that we discover our inner reserves of courage and perseverance. And when we reach the peaks of success and fulfillment, we look back with gratitude at the path that has led us here.</p>
-                    </div>
-                    <div class="copyright">
-                        <h3>Follow me</h3>
-                        <ul class="icons">
-                            <li><a href="#" class="icon fa fa-weibo"><span class="label">微博</span></a></li>
-                            <li><a href="#" class="icon fa fa-film"><span class="label">豆瓣</span></a></li>
-                            <li><a href="#" class="icon fa fa-qq"><span class="label">QQ</span></a></li>
-                            <li><a href="#" class="icon fa fa-weixin"><span class="label">微信</span></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </footer>
+    <!-- Footer -->
+    <footer id="footer"><a href="#" class="info fa fa-info-circle"><span>About</span></a>
+        <div class="inner">
+            <div class="content">
+                <h3>Life's Precious Voyage</h3>
+                <p>Life is an exquisite and captivating journey, a symphony of diverse experiences and emotions. It is a canvas painted with the strokes of joy and sorrow, hope and despair, love and loss. Each step we take is a note in the melody of existence, forming a unique and irreplaceable composition.As we progress, the journey becomes a tapestry woven with the threads of friendships and relationships, each connection adding depth and color to our story. We encounter challenges that mold our character, turning us into resilient beings capable of weathering any storm.Life's journey is not always smooth; there are detours and roadblocks. But it is in these moments of struggle that we discover our inner reserves of courage and perseverance. And when we reach the peaks of success and fulfillment, we look back with gratitude at the path that has led us here.</p>
+            </div>
+            <div class="copyright">
+                <h3>Follow me</h3>
+                <ul class="icons">
+                    <li><a href="#" class="icon fa fa-weibo"><span class="label">微博</span></a></li>
+                    <li><a href="#" class="icon fa fa-film"><span class="label">豆瓣</span></a></li>
+                    <li><a href="#" class="icon fa fa-qq"><span class="label">QQ</span></a></li>
+                    <li><a href="#" class="icon fa fa-weixin"><span class="label">微信</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 
-        <!-- Scripts -->
-            <script src="assets/js/jquery.min.js"></script>
-            <script src="assets/js/skel.min.js"></script>
-            <script src="assets/js/util.js"></script>
-            <script>
-                function enlargeImage(imgElement) {
-                    var enlargedImage = window.open(imgElement.src, '_blank');
-                }
-            </script>
-            <script src="assets/js/main.js"></script>
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script>
+        function enlargeImage(imgElement) {
+            var enlargedImage = window.open(imgElement.src, '_blank');
+        }
+    </script>
+    <script src="assets/js/main.js"></script>
 </body></html>
